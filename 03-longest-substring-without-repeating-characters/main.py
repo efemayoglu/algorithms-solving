@@ -21,4 +21,24 @@ class Solution:
 
         a = len(list(sorted(sbstr, key=len)[len(sbstr)-1])) 
         return a if a>= len(result) else len(result)
+
+
+                       
+        #queue = collections.deque([])        
+        #window = set()
+        #result = 0
+        #
+        #for c in s:            
+        #    if c in window:
+        #        while queue:
+        #            prev = queue.popleft()
+        #            window.remove(prev)
+        #            if prev == c:
+        #                break
+        #                    
+        #    queue.append(c)
+        #    window.add(c)
+        #    result = max(result, len(window))
+        #    
+        #return result
         
