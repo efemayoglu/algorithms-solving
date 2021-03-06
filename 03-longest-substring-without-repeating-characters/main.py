@@ -16,10 +16,12 @@ class Solution:
                     result = ''
                     break
 
-        if len(sbstr) == 0:
+        lsbstr = len(sbstr)
+        
+        if lsbstr == 0:
             return len(result)
 
-        a = len(list(sorted(sbstr, key=len)[len(sbstr)-1])) 
+        a = len(list(sorted(sbstr, key=len)[lsbstr-1])) 
         return a if a>= len(result) else len(result)
 
 
