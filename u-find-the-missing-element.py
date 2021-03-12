@@ -20,6 +20,11 @@
 #     return arr2[-1]
 
 
+#math answer
+# def finder(arr1, arr2):
+#     return sum(arr1) - sum(arr2)
+
+
 def finder(arr1, arr2):
     a = {}
     for i in arr1:
