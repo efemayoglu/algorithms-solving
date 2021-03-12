@@ -1,3 +1,8 @@
+#python trick 1line 
+# def uni_char(s):
+#     return len(set(s))  == len(s)
+
+
 def uni_char(s):
     a = {}
 
