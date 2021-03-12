@@ -26,25 +26,40 @@
 
 
 
-
-
-
-
-
 def compress(s):
     index = 0
     lastChar = s[0]
     n = ""
+    counter = 0
     while index < len(s):  
-        counter = 0
-      
-        while index < len(s) and s[index] == lastChar:
+        if s[index] == lastChar:
             counter += 1
             index += 1
-        n += f'{lastChar}{counter}'
-        if index < len(s):
+        else:
+            n += f'{lastChar}{counter}'
             lastChar = s[index]
+            counter = 0
+    n += f'{lastChar}{counter}'
     return n
+
+
+
+
+
+# def compress(s):
+#     index = 0
+#     lastChar = s[0]
+#     n = ""
+#     while index < len(s):  
+#         counter = 0
+      
+#         while index < len(s) and s[index] == lastChar:
+#             counter += 1
+#             index += 1
+#         n += f'{lastChar}{counter}'
+#         if index < len(s):
+#             lastChar = s[index]
+#     return n
 
 #manuel debugging
             #AAAAABBBBCCCC
