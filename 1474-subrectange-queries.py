@@ -7,10 +7,10 @@ class SubrectangleQueries:
 
     def updateSubrectangle(self, row1: int, col1: int, row2: int, col2: int, newValue: int) -> None:
 
-        for i in range(len(self.a)): #4
-            if i>=row1 and i <= row2: 
-                for j in range(len(self.a[i])):
-                    if j >= col1  and j<= col2:
+        for i in range(row1, row2+1): #4
+            if i <= row2+1: 
+                for j in range(col1, col2+1):
+                    if j<= col2+1:
                         self.a[i][j] = newValue
         return None
 
