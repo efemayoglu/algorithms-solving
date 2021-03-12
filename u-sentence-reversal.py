@@ -50,7 +50,7 @@ print (rev_word('Hi John,   are you ready to go?') == 'go? to ready you are John
 
 print (rev_word('    space before') == 'before space')
 
-
+print(rev_word('space after     ') == 'after space')
 
 
 # Sentence Reversal
