@@ -23,7 +23,7 @@ def hourglassSum(arr):
         
         tmp = arr[currentRow][currenctCol]  + arr[currentRow][currenctCol+1] + arr[currentRow][currenctCol+2] +arr[currentRow+1][currenctCol+1] +arr[currentRow+2][currenctCol] + arr[currentRow+2][currenctCol+1] + arr[currentRow+2][currenctCol+2]
 
-        #s initiliazed with first hourGlass
+        #set first value of the hourGlass because there may be negative value of array so 0 greater then it.
         if isOk == False:
             s = tmp
             isOk = True
