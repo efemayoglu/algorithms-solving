@@ -18,6 +18,8 @@ class Stack(object):
 
 
 def balance_check(string):
+	if len(string) %2 != 0:
+		return False # check if string even 
 	s = Stack()
 	for i in string:
 		if i == '(' or i == '{' or i == '[':
