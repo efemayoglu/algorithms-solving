@@ -13,10 +13,10 @@ def cycle_check(node):
 
         iterator = iterator.next
         if iterator == node:
-            return False
+            return True
 
 
-    return True 
+    return False 
     
 
 
