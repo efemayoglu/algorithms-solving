@@ -1,33 +1,24 @@
 class Node(object):
-
     def __init__(self, value):
-
         self.value = value
         self.next = None
 
-    
 
 def reverse(head):
-    s = []
+    current = head
+    prevNode = None
+    nextNode = None
 
-    iterator = head
-    while iterator.next != None:
-        s.append(iterator.value)
-        iterator = iterator.next
+    while current:
+        nextNode = current.next # backup
+        current.next = prevNode # reversing
+        prevNode = current # prev = current
+        
+        current = nextNode
 
-    s.append(iterator.value)
-
-    newNode = Node(s.pop())
-
-    head = newNode
-
-    for i in range(len(s)):
-        newNode.next = Node(s.pop())
-        newNode = newNode.next
     
-    return head
 
-a = Node(1)
+a = Node(1)        
 
 b = Node(2)
 
@@ -36,42 +27,25 @@ c = Node(3)
 d = Node(4)
 
 
-
 a.next = b
-
 b.next = c
-
 c.next = d
-
 
 iterator = a
 
-
-print('before:reversed')
-
-
-while iterator.next != None:
+while iterator:
     print(iterator.value)
     iterator = iterator.next
 
-print(iterator.value)
 
+print('-----------')
 
+print(d.next.value)
+print(c.next.value)
+print(b.next.value)
 
-a = reverse(a)
+print('------------')
 
-print('after reversed:')
-
-
-while a.next != None:
-    print(a.value)
-    a =a.next
-print(a.value)
-
-
-
-
-
-
+    
 
 
